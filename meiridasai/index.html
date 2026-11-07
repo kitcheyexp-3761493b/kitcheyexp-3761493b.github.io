@@ -1,0 +1,748 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>每日大赛在线吃瓜-热门大赛吃瓜合集_每日大赛吃瓜在线看与热门话题追踪</title>
+<meta name="description" content="每日大赛在线吃瓜专题页，聚合每日大赛热门话题、赛事看点、选手表现与网友吃瓜评论，提供在线吃瓜入口、大赛分类导航、最新动态追踪与常见问题解答，适合想快速了解每日大赛吃瓜内容的用户收藏浏览。">
+<meta name="keywords" content="每日大赛在线吃瓜,每日大赛,大赛吃瓜,在线吃瓜,大赛热门话题">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2314182b'/%3E%3Cpath d='M18 40c4-12 10-18 14-18s10 6 14 18' stroke='%23ffb648' stroke-width='5' fill='none' stroke-linecap='round'/%3E%3Ccircle cx='32' cy='20' r='4' fill='%23ff5f7e'/%3E%3C/svg%3E">
+<style>
+:root{
+  --bg:#0d1020;
+  --bg-soft:#141a30;
+  --card:#1a2138;
+  --card-2:#202941;
+  --line:rgba(255,255,255,.08);
+  --txt:#e8ecf7;
+  --txt-2:#a8b2cc;
+  --txt-3:#7c86a2;
+  --main:#ffb648;
+  --main-2:#ff7a59;
+  --pink:#ff5f7e;
+  --cyan:#4fd1c5;
+  --violet:#8b7cf6;
+  --radius:16px;
+  --shadow:0 10px 30px rgba(0,0,0,.35);
+  --max:1200px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  background:radial-gradient(1200px 600px at 15% -10%,rgba(255,95,126,.13),transparent 60%),
+             radial-gradient(900px 500px at 90% 0%,rgba(79,209,197,.10),transparent 60%),
+             var(--bg);
+  color:var(--txt);
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
+  font-size:15px;
+  line-height:1.75;
+  -webkit-font-smoothing:antialiased;
+}
+a{color:inherit;text-decoration:none}
+img{max-width:100%}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 18px}
+section{scroll-margin-top:76px}
+
+/* 导航 */
+.topbar{
+  position:sticky;top:0;z-index:60;
+  backdrop-filter:blur(14px);
+  background:rgba(13,16,32,.82);
+  border-bottom:1px solid var(--line);
+}
+.nav-inner{display:flex;align-items:center;gap:18px;height:62px}
+.logo{display:flex;align-items:center;gap:10px;font-weight:800;font-size:17px;letter-spacing:.5px;white-space:nowrap}
+.logo-mark{
+  width:32px;height:32px;border-radius:9px;flex:0 0 auto;
+  background:linear-gradient(135deg,var(--main),var(--pink));
+  display:grid;place-items:center;color:#161a2c;font-size:16px;font-weight:900;
+}
+.logo small{display:block;font-size:10px;font-weight:500;color:var(--txt-3);letter-spacing:1px}
+.nav-links{display:flex;gap:4px;overflow-x:auto;scrollbar-width:none}
+.nav-links::-webkit-scrollbar{display:none}
+.nav-links a{
+  padding:7px 12px;border-radius:9px;font-size:13.5px;color:var(--txt-2);
+  white-space:nowrap;transition:.18s;
+}
+.nav-links a:hover{background:rgba(255,255,255,.07);color:var(--txt)}
+.nav-cta{
+  margin-left:auto;flex:0 0 auto;
+  background:linear-gradient(135deg,var(--main),var(--main-2));
+  color:#1a1206;font-weight:700;font-size:13px;
+  padding:8px 16px;border-radius:10px;transition:.2s;
+}
+.nav-cta:hover{transform:translateY(-1px);box-shadow:0 8px 18px rgba(255,140,80,.28)}
+
+/* Banner */
+.hero{padding:44px 0 34px;position:relative;overflow:hidden}
+.hero-grid{display:grid;grid-template-columns:1.35fr .65fr;gap:32px;align-items:center}
+.hero-badge{
+  display:inline-flex;align-items:center;gap:7px;
+  font-size:12px;color:var(--main);
+  background:rgba(255,182,72,.12);
+  border:1px solid rgba(255,182,72,.28);
+  padding:5px 12px;border-radius:99px;margin-bottom:16px;
+}
+.hero-badge i{width:6px;height:6px;border-radius:50%;background:var(--main);display:block;animation:blink 1.6s infinite}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:.25}}
+h1{
+  font-size:clamp(26px,3.6vw,40px);line-height:1.28;letter-spacing:.5px;
+  font-weight:800;margin-bottom:14px;
+}
+h1 em{font-style:normal;color:var(--main)}
+.hero-desc{color:var(--txt-2);font-size:14.5px;max-width:620px;margin-bottom:20px}
+.searchbox{
+  display:flex;gap:8px;background:var(--card);
+  border:1px solid var(--line);border-radius:13px;padding:7px;max-width:520px;
+  box-shadow:var(--shadow);
+}
+.searchbox input{
+  flex:1;background:transparent;border:0;outline:0;color:var(--txt);
+  font-size:14px;padding:8px 12px;font-family:inherit;
+}
+.searchbox input::placeholder{color:var(--txt-3)}
+.searchbox button{
+  border:0;cursor:pointer;font-family:inherit;font-weight:700;font-size:13.5px;
+  padding:9px 20px;border-radius:9px;color:#1a1206;
+  background:linear-gradient(135deg,var(--main),var(--main-2));
+}
+.hero-tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
+.hero-tags a{
+  font-size:12.5px;color:var(--txt-2);
+  border:1px solid var(--line);background:rgba(255,255,255,.03);
+  padding:5px 12px;border-radius:99px;transition:.18s;
+}
+.hero-tags a:hover{border-color:rgba(255,182,72,.5);color:var(--main)}
+.hero-side{display:grid;gap:12px}
+.side-card{
+  background:linear-gradient(150deg,var(--card),var(--card-2));
+  border:1px solid var(--line);border-radius:var(--radius);
+  padding:14px 16px;box-shadow:var(--shadow);
+}
+.side-card h4{font-size:12px;color:var(--txt-3);font-weight:600;letter-spacing:1px;margin-bottom:8px}
+.side-card p{font-size:13.5px;color:var(--txt-2)}
+.side-card strong{color:var(--main);font-size:20px;font-family:Georgia,serif}
+
+/* 通用 section */
+.sec{padding:34px 0}
+.sec-head{display:flex;align-items:flex-end;gap:14px;margin-bottom:20px;flex-wrap:wrap}
+.sec-head h2{
+  font-size:21px;font-weight:800;letter-spacing:.4px;position:relative;padding-left:14px;
+}
+.sec-head h2::before{
+  content:"";position:absolute;left:0;top:50%;transform:translateY(-50%);
+  width:4px;height:19px;border-radius:3px;
+  background:linear-gradient(180deg,var(--main),var(--pink));
+}
+.sec-head span{font-size:13px;color:var(--txt-3);padding-bottom:2px}
+.sec-head .more{margin-left:auto;font-size:13px;color:var(--txt-2)}
+.sec-head .more:hover{color:var(--main)}
+
+/* 分类 */
+.cat-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.cat-item{
+  display:flex;align-items:center;gap:12px;
+  background:var(--card);border:1px solid var(--line);
+  border-radius:13px;padding:14px 15px;transition:.2s;
+}
+.cat-item:hover{transform:translateY(-3px);border-color:rgba(255,182,72,.4);box-shadow:0 12px 24px rgba(0,0,0,.3)}
+.cat-ico{
+  width:38px;height:38px;border-radius:10px;flex:0 0 auto;display:grid;place-items:center;
+  font-size:16px;font-weight:800;color:#161a2c;
+}
+.cat-item b{display:block;font-size:14px}
+.cat-item small{display:block;font-size:11.5px;color:var(--txt-3)}
+
+/* 推荐卡片 */
+.rec-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.rec-card{
+  background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+  overflow:hidden;transition:.22s;display:flex;flex-direction:column;
+}
+.rec-card:hover{transform:translateY(-4px);border-color:rgba(255,182,72,.35);box-shadow:0 16px 34px rgba(0,0,0,.4)}
+.rec-cover{
+  height:126px;position:relative;display:flex;align-items:flex-end;padding:12px;
+}
+.rec-cover::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 30%,rgba(10,12,22,.85))}
+.rec-cover b{
+  position:relative;z-index:2;font-size:15px;font-weight:800;text-shadow:0 2px 8px rgba(0,0,0,.6);
+}
+.rec-tagline{
+  position:absolute;top:10px;right:10px;z-index:2;font-size:11px;
+  background:rgba(0,0,0,.45);border:1px solid rgba(255,255,255,.16);
+  padding:3px 9px;border-radius:99px;color:#fff;backdrop-filter:blur(6px);
+}
+.rec-body{padding:13px 15px 15px;display:flex;flex-direction:column;gap:9px;flex:1}
+.rec-tags{display:flex;flex-wrap:wrap;gap:6px}
+.rec-tags i{
+  font-style:normal;font-size:11px;color:var(--txt-2);
+  background:rgba(255,255,255,.05);border:1px solid var(--line);
+  padding:2px 8px;border-radius:6px;
+}
+.rec-body p{font-size:13px;color:var(--txt-2);line-height:1.7;flex:1}
+.rec-meta{display:flex;gap:12px;font-size:11.5px;color:var(--txt-3);border-top:1px solid var(--line);padding-top:9px}
+.rec-meta b{color:var(--main);font-weight:700}
+
+/* 更新列表 */
+.upd-list{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+.upd-item{
+  display:flex;align-items:center;gap:13px;
+  background:var(--card);border:1px solid var(--line);border-radius:12px;
+  padding:12px 15px;transition:.18s;
+}
+.upd-item:hover{background:var(--card-2);border-color:rgba(79,209,197,.35)}
+.upd-time{font-size:12px;color:var(--cyan);flex:0 0 auto;font-variant-numeric:tabular-nums;width:52px}
+.upd-item b{font-size:13.5px;font-weight:600;flex:0 0 auto}
+.upd-item span{font-size:12.5px;color:var(--txt-3);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.upd-dot{width:7px;height:7px;border-radius:50%;background:var(--pink);flex:0 0 auto;box-shadow:0 0 0 4px rgba(255,95,126,.14)}
+
+/* 深度解析 */
+.deep{
+  background:linear-gradient(160deg,var(--bg-soft),var(--card));
+  border:1px solid var(--line);border-radius:20px;padding:30px 32px;
+}
+.deep h3{font-size:16.5px;margin:22px 0 10px;color:var(--main);font-weight:700}
+.deep h3:first-child{margin-top:0}
+.deep p{color:var(--txt-2);font-size:14px;margin-bottom:12px;text-align:justify}
+.deep strong{color:var(--txt);font-weight:600}
+.deep .quote{
+  border-left:3px solid var(--main);background:rgba(255,182,72,.06);
+  padding:12px 16px;border-radius:0 10px 10px 0;margin:14px 0;font-size:13.5px;color:var(--txt-2);
+}
+
+/* 数据看板 */
+.stat-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.stat{
+  background:var(--card);border:1px solid var(--line);border-radius:14px;
+  padding:18px;text-align:center;
+}
+.stat b{display:block;font-size:26px;font-family:Georgia,serif;color:var(--main);line-height:1.2}
+.stat span{font-size:12.5px;color:var(--txt-3)}
+
+/* FAQ */
+.faq-list{display:grid;gap:10px}
+.faq-item{
+  background:var(--card);border:1px solid var(--line);border-radius:12px;overflow:hidden;
+}
+.faq-q{
+  padding:15px 18px;font-size:14.5px;font-weight:600;cursor:pointer;
+  display:flex;align-items:center;gap:12px;list-style:none;
+}
+.faq-q::-webkit-details-marker{display:none}
+.faq-q::before{
+  content:"Q";flex:0 0 auto;width:22px;height:22px;border-radius:6px;
+  background:rgba(255,182,72,.15);color:var(--main);font-size:12px;font-weight:800;
+  display:grid;place-items:center;
+}
+.faq-q::after{content:"+";margin-left:auto;color:var(--txt-3);font-size:18px;font-weight:400}
+details[open] .faq-q::after{content:"−"}
+.faq-a{padding:0 18px 16px 52px;font-size:13.5px;color:var(--txt-2);line-height:1.8}
+
+/* 评论 */
+.cmt-wrap{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+.cmt{
+  background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 16px;
+}
+.cmt-top{display:flex;align-items:center;gap:9px;margin-bottom:8px}
+.avatar{
+  width:28px;height:28px;border-radius:50%;flex:0 0 auto;display:grid;place-items:center;
+  font-size:12px;font-weight:800;color:#161a2c;
+}
+.cmt-top b{font-size:13px}
+.cmt-top time{margin-left:auto;font-size:11.5px;color:var(--txt-3)}
+.cmt p{font-size:13px;color:var(--txt-2);line-height:1.72}
+
+/* 资讯 */
+.news-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.news-item{
+  background:var(--card);border:1px solid var(--line);border-radius:13px;padding:16px;
+  transition:.2s;display:flex;flex-direction:column;gap:8px;
+}
+.news-item:hover{transform:translateY(-3px);border-color:rgba(139,124,246,.4)}
+.news-item time{font-size:11.5px;color:var(--violet)}
+.news-item b{font-size:14px;line-height:1.55}
+.news-item p{font-size:12.5px;color:var(--txt-3);line-height:1.7}
+
+/* 订阅 */
+.subscribe{
+  background:linear-gradient(120deg,rgba(255,182,72,.13),rgba(255,95,126,.10));
+  border:1px solid rgba(255,182,72,.25);border-radius:20px;
+  padding:30px;display:flex;align-items:center;gap:24px;flex-wrap:wrap;
+}
+.subscribe h3{font-size:19px;font-weight:800;margin-bottom:5px}
+.subscribe p{font-size:13px;color:var(--txt-2)}
+.subscribe form{margin-left:auto;display:flex;gap:8px;flex-wrap:wrap}
+.subscribe input{
+  background:rgba(0,0,0,.28);border:1px solid var(--line);border-radius:10px;
+  padding:11px 16px;color:var(--txt);outline:0;font-family:inherit;font-size:13.5px;min-width:220px;
+}
+.subscribe button{
+  border:0;cursor:pointer;font-family:inherit;font-weight:700;font-size:13.5px;
+  padding:11px 22px;border-radius:10px;color:#1a1206;
+  background:linear-gradient(135deg,var(--main),var(--main-2));
+}
+
+/* 页脚 */
+footer{
+  margin-top:40px;border-top:1px solid var(--line);
+  background:rgba(0,0,0,.22);padding:34px 0 26px;
+}
+.foot-grid{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:26px;margin-bottom:26px}
+.foot-grid h5{font-size:13px;margin-bottom:11px;color:var(--txt)}
+.foot-grid a{display:block;font-size:12.5px;color:var(--txt-3);padding:3px 0}
+.foot-grid a:hover{color:var(--main)}
+.foot-desc{font-size:12.5px;color:var(--txt-3);line-height:1.9;max-width:340px}
+.foot-bottom{
+  border-top:1px solid var(--line);padding-top:18px;
+  display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;
+  font-size:12px;color:var(--txt-3);
+}
+
+@media(max-width:980px){
+  .hero-grid{grid-template-columns:1fr}
+  .rec-grid,.news-grid{grid-template-columns:repeat(2,1fr)}
+  .cat-grid,.stat-grid{grid-template-columns:repeat(2,1fr)}
+  .foot-grid{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:640px){
+  .nav-links{display:none}
+  .rec-grid,.news-grid,.upd-list,.cmt-wrap{grid-template-columns:1fr}
+  .cat-grid{grid-template-columns:1fr}
+  .stat-grid{grid-template-columns:repeat(2,1fr)}
+  .deep{padding:22px 18px}
+  .subscribe{padding:22px 18px}
+  .subscribe form{margin-left:0;width:100%}
+  .subscribe input{flex:1;min-width:0}
+  .foot-grid{grid-template-columns:1fr 1fr}
+  .hero{padding:30px 0 22px}
+}
+</style>
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<!-- 导航 -->
+<header class="topbar">
+  <div class="wrap nav-inner">
+    <a class="logo" href="/#home">
+      <span class="logo-mark">瓜</span>
+      <span>每日大赛在线吃瓜<small>DAILY ARENA WATCH</small></span>
+    </a>
+    <nav class="nav-links">
+      <a href="/#hot">热门推荐</a>
+      <a href="/#update">最新动态</a>
+      <a href="/#cats">分类入口</a>
+      <a href="/#deep">深度解析</a>
+      <a href="/#guide">吃瓜指南</a>
+      <a href="/#faq">常见问题</a>
+      <a href="/#news">赛事资讯</a>
+      <a href="/#comments">网友评论</a>
+    </nav>
+    <a class="nav-cta" href="/#hot">开始吃瓜</a>
+  </div>
+</header>
+
+<main id="home">
+
+<!-- 首屏 -->
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <span class="hero-badge"><i></i>2026年11月7日 赛事吃瓜热点实时追踪中</span>
+      <h1>每日大赛在线吃瓜：热门赛事看点、选手动态与网友热议一站聚合</h1>
+      <p class="hero-desc">围绕每日大赛在线吃瓜的核心需求，这里把当天最值得围观的对局、最有争议的判罚、最有梗的选手表现整理成可读的专题内容。你不需要在多个平台之间来回切换，打开页面就能顺着分类找到想看的大赛话题，从赛前预测到赛后复盘一路吃瓜到底。</p>
+      <form class="searchbox" onsubmit="return false;">
+        <input type="text" placeholder="搜索赛事名称、选手、热门话题，例如：每日大赛在线吃瓜 今日看点">
+        <button type="button">搜索吃瓜</button>
+      </form>
+      <div class="hero-tags">
+        <a href="/#hot">今日大赛热点</a>
+        <a href="/#update">最新赛果</a>
+        <a href="/#cats">分类找瓜</a>
+        <a href="/#deep">赛况解析</a>
+        <a href="/#comments">网友热议</a>
+        <a href="/#faq">吃瓜答疑</a>
+        <a href="/#news">赛事资讯</a>
+        <a href="/#guide">在线吃瓜指南</a>
+      </div>
+    </div>
+    <div class="hero-side">
+      <div class="side-card">
+        <h4>今日吃瓜热度</h4>
+        <p><strong>86.4万</strong> 人次围观 · 较昨日 <span style="color:#4fd1c5">+12.6%</span></p>
+      </div>
+      <div class="side-card">
+        <h4>正在进行的赛事</h4>
+        <p>共计 <strong>9</strong> 场，其中 <strong>3</strong> 场进入决胜阶段，争议判罚讨论量最高。</p>
+      </div>
+      <div class="side-card">
+        <h4>吃瓜提示</h4>
+        <p>页面内容按“赛事—看点—讨论”三层组织，建议先看首屏热点，再按分类深挖。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 内容简介 -->
+<section class="sec" id="intro">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>每日大赛在线吃瓜专题简介</h2>
+      <span>这个页面到底能帮你看到什么</span>
+    </div>
+    <div class="deep">
+      <p>“<strong>每日大赛在线吃瓜</strong>”这个搜索词背后，通常对应着三种很具体的内容需求：一是想快速知道今天有哪些大赛正在进行、哪些已经出结果；二是想知道比赛之外发生了什么，比如选手赛后发言、现场花絮、判罚争议；三是想在评论区找到和自己观点相近的人，一起吐槽或者一起复盘。本页面就是围绕这三种需求搭建的专题聚合页，把分散的信息按照“赛事—看点—讨论”的路径重新排列，让吃瓜这件事变得更有方向感。</p>
+      <p>页面适合的人群比较宽：既包括每天固定蹲守大赛结果的老观众，也包括偶尔刷到热搜、想搞清楚“到底发生了什么”的轻度用户；既包括关注技战术细节的硬核看客，也包括只想看看热闹、顺便参与评论区讨论的普通网友。不同类型的读者可以走不同的路径：想追进度的直接看最新更新模块，想恶补背景的从深度解析读起，想找乐子的翻评论和热门观点即可。</p>
+      <p>和单纯的资讯流相比，<strong>每日大赛在线吃瓜</strong>专题页更强调“可读性”和“可停留性”。每条推荐卡片都写清了看点，每段解析都尽量交代前因后果，FAQ 部分还专门回答了“从哪看起”“怎么判断信息值不值得信”这类实际问题。你可以把它当作每天打开一次的信息站，也可以收藏起来，在大赛密集期当作赛事日历使用。页面内容会随着赛事节奏更新，持续关注能积累出对大赛整体格局的清晰认知。</p>
+    </div>
+  </div>
+</section>
+
+<!-- 分类入口 -->
+<section class="sec" id="cats">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>吃瓜分类入口</h2>
+      <span>按赛事类型和关注方向快速定位</span>
+      <a class="more" href="/#hot">查看全部 →</a>
+    </div>
+    <div class="cat-grid">
+      <a class="cat-item" href="/#hot">
+        <span class="cat-ico" style="background:linear-gradient(135deg,#ffb648,#ff7a59)">热</span>
+        <span><b>今日热门大赛</b><small>讨论量最高的对局</small></span>
+      </a>
+      <a class="cat-item" href="/#update">
+        <span class="cat-ico" style="background:linear-gradient(135deg,#4fd1c5,#3aa8c9)">新</span>
+        <span><b>最新赛果速递</b><small>比分与晋级情况</small></span>
+      </a>
+      <a class="cat-item" href="/#hot">
+        <span class="cat-ico" style="background:linear-gradient(135deg,#ff5f7e,#c94f9e)">争</span>
+        <span><b>判罚争议专区</b><small>回放与规则解读</small></span>
+      </a>
+      <a class="cat-item" href="/#deep">
+        <span class="cat-ico" style="background:linear-gradient(135deg,#8b7cf6,#5d63d6)">析</span>
+        <span><b>战术复盘解析</b><small>看懂关键回合</small></span>
+      </a>
+      <a class="cat-item" href="/#comments">
+        <span class="cat-ico" style="background:linear-gradient(135deg,#57c785,#3a9e6f)">评</span>
+        <span><b>网友评论精选</b><small>高赞观点汇集</small></span>
+      </a>
+      <a class="cat-item" href="/#hot">
+        <span class="cat-ico" style="background:linear-gradient(135deg,#f0b429,#d99a1a)">人</span>
+        <span><b>选手状态追踪</b><small>发挥与赛后发言</small></span>
+      </a>
+      <a class="cat-item" href="/#news">
+        <span class="cat-ico" style="background:linear-gradient(135deg,#4ea8de,#3a7fc4)">讯</span>
+        <span><b>大赛资讯速览</b><small>赛程与规则变动</small></span>
+      </a>
+      <a class="cat-item" href="/#guide">
+        <span class="cat-ico" style="background:linear-gradient(135deg,#e07b54,#c25b3a)">教</span>
+        <span><b>新观众入门</b><small>吃瓜顺序与术语</small></span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- 热门推荐 -->
+<section class="sec" id="hot">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>今日热门大赛吃瓜推荐</h2>
+      <span>按讨论热度排序，每条都附看点摘要</span>
+    </div>
+    <div class="rec-grid">
+
+      <article class="rec-card">
+        <div class="rec-cover" style="background:linear-gradient(135deg,#3b2a6b,#8b3a62)">
+          <span class="rec-tagline">热度 98</span>
+          <b>城市冠军赛·决胜局</b>
+        </div>
+        <div class="rec-body">
+          <div class="rec-tags"><i>竞技对局</i><i>决胜局</i><i>判罚争议</i></div>
+          <p>最后两分钟连续两次判罚引发大规模讨论，回放角度与规则条文成为评论区焦点，适合想搞清楚争议点的观众。</p>
+          <div class="rec-meta"><span>围观 <b>12.8万</b></span><span>讨论 <b>3400+</b></span></div>
+        </div>
+      </article>
+
+      <article class="rec-card">
+        <div class="rec-cover" style="background:linear-gradient(135deg,#0f4c5c,#2a7f7a)">
+          <span class="rec-tagline">热度 94</span>
+          <b>新人挑战赛·黑马突围</b>
+        </div>
+        <div class="rec-body">
+          <div class="rec-tags"><i>黑马选手</i><i>晋级之路</i><i>赛后采访</i></div>
+          <p>赛前无人看好的选手连赢三场，赛后一句“我只是把训练打完了”被反复引用，成为今天最出圈的吃瓜素材。</p>
+          <div class="rec-meta"><span>围观 <b>9.6万</b></span><span>讨论 <b>2100+</b></span></div>
+        </div>
+      </article>
+
+      <article class="rec-card">
+        <div class="rec-cover" style="background:linear-gradient(135deg,#5a3a1f,#a86b32)">
+          <span class="rec-tagline">热度 91</span>
+          <b>老将告别赛·最后一舞</b>
+        </div>
+        <div class="rec-body">
+          <div class="rec-tags"><i>老将退役</i><i>情怀场</i><i>现场花絮</i></div>
+          <p>比赛结果不算意外，但赛后的致意环节和观众席横幅让很多人破防，属于“比赛看结果、吃瓜看情绪”的典型场次。</p>
+          <div class="rec-meta"><span>围观 <b>8.2万</b></span><span>讨论 <b>1900+</b></span></div>
+        </div>
+      </article>
+
+      <article class="rec-card">
+        <div class="rec-cover" style="background:linear-gradient(135deg,#2b2f5e,#4a5ba8)">
+          <span class="rec-tagline">热度 88</span>
+          <b>双人组队赛·配合失误</b>
+        </div>
+        <div class="rec-body">
+          <div class="rec-tags"><i>组队赛</i><i>配合失误</i><i>赛后甩锅</i></div>
+          <p>一次明显沟通失误直接改变比赛走向，赛后双方发言微妙，评论区已经吵成两派，很适合喜欢分析人际配合的观众。</p>
+          <div class="rec-meta"><span>围观 <b>7.5万</b></span><span>讨论 <b>2600+</b></span></div>
+        </div>
+      </article>
+
+      <article class="rec-card">
+        <div class="rec-cover" style="background:linear-gradient(135deg,#4a1f3d,#8a3a6b)">
+          <span class="rec-tagline">热度 85</span>
+          <b>女子组决赛·逆转之战</b>
+        </div>
+        <div class="rec-body">
+          <div class="rec-tags"><i>女子组</i><i>大逆转</i><i>心态管理</i></div>
+          <p>落后情况下连追关键分完成翻盘，技术统计和心态变化都值得细看，是今天少数“几乎无争议”的高质量对局。</p>
+          <div class="rec-meta"><span>围观 <b>6.9万</b></span><span>讨论 <b>1400+</b></span></div>
+        </div>
+      </article>
+
+      <article class="rec-card">
+        <div class="rec-cover" style="background:linear-gradient(135deg,#1f3a2c,#3f7a52)">
+          <span class="rec-tagline">热度 82</span>
+          <b>线上积分赛·规则微调</b>
+        </div>
+        <div class="rec-body">
+          <div class="rec-tags"><i>规则变动</i><i>积分赛</i><i>影响分析</i></div>
+          <p>主办方临时调整积分权重，直接影响晋级形势。想搞懂“这次改规则到底对谁有利”的观众，可以从这条看起。</p>
+          <div class="rec-meta"><span>围观 <b>5.4万</b></span><span>讨论 <b>1100+</b></span></div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- 最新更新 -->
+<section class="sec" id="update">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>最新赛果与吃瓜动态</h2>
+      <span>2026年11月7日更新</span>
+      <a class="more" href="/#news">更多资讯 →</a>
+    </div>
+    <div class="upd-list">
+      <div class="upd-item"><span class="upd-time">14:32</span><span class="upd-dot"></span><b>城市冠军赛</b><span>决胜局结果公布，判罚说明同步释出</span></div>
+      <div class="upd-item"><span class="upd-time">13:58</span><span class="upd-dot"></span><b>新人挑战赛</b><span>黑马选手晋级四强，赛后采访视频上线</span></div>
+      <div class="upd-item"><span class="upd-time">13:20</span><span class="upd-dot"></span><b>女子组决赛</b><span>逆转好局结束，技术统计已更新</span></div>
+      <div class="upd-item"><span class="upd-time">12:44</span><span class="upd-dot"></span><b>线上积分赛</b><span>积分规则微调公告发布，影响面待评估</span></div>
+      <div class="upd-item"><span class="upd-time">11:50</span><span class="upd-dot"></span><b>双人组队赛</b><span>配合失误片段被大量转发，双方回应</span></div>
+      <div class="upd-item"><span class="upd-time">11:12</span><span class="upd-dot"></span><b>老将告别赛</b><span>现场致意环节结束，观众席横幅成热点</span></div>
+      <div class="upd-item"><span class="upd-time">10:36</span><span class="upd-dot"></span><b>赛程公告</b><span>明日对阵表更新，两场焦点战提前</span></div>
+      <div class="upd-item"><span class="upd-time">09:48</span><span class="upd-dot"></span><b>选手动态</b><span>昨日受伤选手确认无碍，可正常出战</span></div>
+      <div class="upd-item"><span class="upd-time">09:15</span><span class="upd-dot"></span><b>裁判组</b><span>就昨日争议判罚发布补充说明</span></div>
+      <div class="upd-item"><span class="upd-time">08:30</span><span class="upd-dot"></span><b>今日看点</b><span>三场关键对局时间表整理完成</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- 深度解析 -->
+<section class="sec" id="deep">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>每日大赛在线吃瓜深度解析</h2>
+      <span>为什么这些内容值得看、怎么看</span>
+    </div>
+    <div class="deep">
+      <h3>一、大赛型内容的吸引力来自“不确定性”</h3>
+      <p>每天都有比赛，但每天的比赛都不一样，这正是<strong>每日大赛在线吃瓜</strong>这类内容能持续吸引人的根本原因。观众真正期待的不是“谁赢了”这个结果本身，而是结果出现之前的悬念：领先方会不会被翻盘，状态起伏的选手能不能稳住，临时改的规则会不会成为胜负手。专题页把这些悬念拆开讲，比单纯播报比分更有阅读价值。</p>
+      <h3>二、吃瓜的本质是“补上下文”</h3>
+      <p>很多争议之所以吵得凶，是因为不同人掌握的上下文不一样。有人只看了一个切片视频，有人看了全场，有人还知道赛前发生了什么。页面里的深度解析和 FAQ 就是在补这层上下文：判罚依据是什么、选手此前状态如何、规则改动影响了哪些环节。把上下文补齐之后，很多“不可思议”的事其实都有解释，吃瓜也就能吃得更明白。</p>
+      <div class="quote">真正高质量的吃瓜，不是抢在第一个下结论，而是知道该看哪些信息、该等哪些后续。</div>
+      <h3>三、选手表现要分层次看</h3>
+      <p>评价一个选手，至少可以分三层：结果层看输赢，过程层看关键回合的处理，情绪层看赛后反应和临场心态。只看结果容易失真，只抓情绪又容易变成站队。本页在推荐卡片和解析里尽量把三层分开呈现，读者可以自己判断哪一层更重要。对于争议较大的场次，页面会同时给出多方观点，而不是只保留一种声音。</p>
+      <h3>四、节奏与消费体验同样重要</h3>
+      <p>大赛密集的时候，信息量会非常大，如果页面只是把所有内容平铺出来，读者很快就会疲劳。因此本页采用了“热门靠前、更新分层、分类可跳转”的结构：首屏给出当天最重要的几件事，中部按分类展开，后部用 FAQ 和评论收尾。这样即使只停留三五分钟，也能带走有效信息；愿意深入的人，则可以顺着内链继续往下看。</p>
+      <h3>五、同类内容比较：专题页比信息流更适合“追大赛”</h3>
+      <p>纯信息流适合快速刷，但不利于回看和对照；专题页的优势在于结构稳定、栏目固定，今天看过的位置明天还在。对于每天都要关注大赛的观众来说，专题页更像一个可以反复打开的“赛事工作台”：热门推荐告诉你今天看什么，最新更新告诉你进行到哪一步，深度解析告诉你为什么值得看，评论区和 FAQ 则解决“别人怎么看”和“我还有哪些没搞懂”的问题。这也是<strong>每日大赛在线吃瓜</strong>专题页相对普通资讯页的核心差异。</p>
+    </div>
+  </div>
+</section>
+
+<!-- 数据看板 -->
+<section class="sec" id="stats">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>今日吃瓜数据看板</h2>
+      <span>模拟统计，用于呈现页面信息密度</span>
+    </div>
+    <div class="stat-grid">
+      <div class="stat"><b>9</b><span>今日进行中赛事</span></div>
+      <div class="stat"><b>86.4万</b><span>专题页围观人次</span></div>
+      <div class="stat"><b>27</b><span>新增吃瓜话题</span></div>
+      <div class="stat"><b>6</b><span>争议判罚讨论</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- 吃瓜指南 -->
+<section class="sec" id="guide">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>在线吃瓜体验指南</h2>
+      <span>怎么用这个页面更省时间</span>
+    </div>
+    <div class="deep">
+      <p>第一，先看首屏的“今日吃瓜热度”和“正在进行的赛事”两个小卡片，它们能在一分钟内告诉你今天大概有哪些值得关注的场次。如果你时间很紧，只看这两个卡片加上最新更新列表，基本就不会错过当天最重要的事。</p>
+      <p>第二，按需进入分类。想追结果去“最新赛果速递”，想搞懂争议去“判罚争议专区”，想看懂比赛去“战术复盘解析”。分类入口的设计原则是“按需求而不是按时间”，这样即使你隔了几天再来，也能快速找到自己关心的那一类内容。</p>
+      <p>第三，善用 FAQ。很多观众第一次接触某个大赛时，会被术语和赛制绕晕，FAQ 里的问题都是从实际搜索需求里提炼出来的，回答也尽量控制在能一口气读完的长度。读完之后再回头看比赛，理解成本会明显降低。</p>
+      <p>第四，评论区可以当作“第二信息源”。评论里经常有人补充现场细节、历史背景或者不同角度的事实，但也要注意甄别，情绪化表达和未经证实的说法都不少。建议把评论当作线索，而不是结论。</p>
+      <p>最后，页面在移动端的排版做了专门优化：卡片会收成单列，导航可以横向滑动，FAQ 采用折叠形式，适合在通勤或者碎片时间快速浏览。收藏本页之后，每天打开一次就能跟上大赛节奏。</p>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="sec" id="faq">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>每日大赛在线吃瓜常见问题</h2>
+      <span>新观众最常问的 6 个问题</span>
+    </div>
+    <div class="faq-list">
+      <details class="faq-item" open>
+        <summary class="faq-q">每日大赛在线吃瓜这个页面主要看什么内容？</summary>
+        <div class="faq-a">页面围绕每天进行中的大赛，整理三类内容：一是赛果与晋级情况，二是比赛之外的看点与争议，三是网友讨论与观点汇总。你可以把它理解为一个“每天更新的大赛信息台”，先看首屏热点，再按分类深入，不需要额外跳转多个平台就能掌握当天的主要吃瓜线索。</div>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-q">第一次看大赛，应该从哪里开始？</summary>
+        <div class="faq-a">建议先读一遍本页的专题简介和深度解析，建立对赛制、术语和常见看点的基本认知，然后再看最新更新列表了解当前进度。如果时间有限，可以直接从 FAQ 里的问题入手，按自己好奇的点逐个看，最后再回到推荐卡片挑选具体场次。这个顺序比一上来就扎进评论区更有效率。</div>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-q">判罚争议类的吃瓜内容值得信吗？</summary>
+        <div class="faq-a">判罚争议往往信息不完全，建议同时看三类材料：官方说明、多角度回放、以及规则原文。本页在相关条目里尽量把这几类信息分开呈现，方便读者自行判断。评论区可以看，但要区分“事实补充”和“情绪表达”，对没有来源的说法保持谨慎，这样吃瓜才不容易被带偏。</div>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-q">页面里的赛事和选手信息是怎么组织的？</summary>
+        <div class="faq-a">整体按“赛事—看点—讨论”三层组织。赛事层给出名称、阶段和结果；看点层提炼每场值得关注的地方，比如逆转、失误、规则变化；讨论层则汇总评论区的高频观点。三层之间通过栏目和卡片互相链接，你可以从任意一层进入，再顺着相关内容往下看，形成自己的阅读路径。</div>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-q">适合哪些人收藏这个吃瓜专题页？</summary>
+        <div class="faq-a">适合每天关注大赛结果的老观众、偶尔刷到热搜想补背景的轻度用户，以及喜欢在评论区参与讨论的网友。如果你只是想知道“今天发生了什么”，看首屏和最新更新就够；如果你想看懂比赛和争议，可以继续读深度解析。不同需求的人都能找到适合自己的入口，这是本页设计时的主要考虑。</div>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-q">后续更新会关注哪些方向？</summary>
+        <div class="faq-a">后续会继续跟进赛程变化、关键对局结果、选手状态波动和规则调整，同时补充更多新观众向的解读内容。对于争议较大的场次，会尽量补充后续说明和多方观点，避免只留下单一结论。如果你有特别想了解的方向，也可以从评论区和资讯模块找到相关线索，再顺着内链继续浏览。</div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- 评论 -->
+<section class="sec" id="comments">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>网友吃瓜评论精选</h2>
+      <span>近 30 天真实感讨论摘录</span>
+    </div>
+    <div class="cmt-wrap">
+      <div class="cmt"><div class="cmt-top"><span class="avatar" style="background:linear-gradient(135deg,#ffb648,#ff7a59)">阿</span><b>阿柴不吃瓜皮</b><time>11-06</time></div><p>决胜局那两次判罚我是反复看了三遍回放才有点明白，规则条文确实写得比较绕，建议先看官方说明再看评论区，不然容易被带节奏。</p></div>
+      <div class="cmt"><div class="cmt-top"><span class="avatar" style="background:linear-gradient(135deg,#4fd1c5,#3aa8c9)">小</span><b>小满今天看比赛</b><time>11-06</time></div><p>黑马选手那段采访是真的圈粉，没有什么豪言壮语，就是很实在地说把训练打完了，这种反而比喊口号更让人记住。</p></div>
+      <div class="cmt"><div class="cmt-top"><span class="avatar" style="background:linear-gradient(135deg,#ff5f7e,#c94f9e)">橘</span><b>橘子汽水加冰</b><time>11-05</time></div><p>老将告别赛看得有点难受，结果其实赛前就能猜到，但现场那个致意环节还是顶不住。吃瓜吃到情怀场就是这样。</p></div>
+      <div class="cmt"><div class="cmt-top"><span class="avatar" style="background:linear-gradient(135deg,#8b7cf6,#5d63d6)">夜</span><b>夜航船不睡</b><time>11-05</time></div><p>双人组队赛那个配合失误，我觉得不能全怪一个人，沟通机制本身就有问题。评论区一边倒骂某一方，有点过了。</p></div>
+      <div class="cmt"><div class="cmt-top"><span class="avatar" style="background:linear-gradient(135deg,#57c785,#3a9e6f)">慢</span><b>慢半拍观众</b><time>11-04</time></div><p>女子组决赛是今天质量最高的一场，几乎没有争议，纯看技术和心态。可惜讨论度不如那些吵架的场次，有点可惜。</p></div>
+      <div class="cmt"><div class="cmt-top"><span class="avatar" style="background:linear-gradient(135deg,#f0b429,#d99a1a)">老</span><b>老张看热闹</b><time>11-04</time></div><p>积分规则一改，我算了半天也没算明白对谁有利，还是看你们分析吧。这种规则类的东西真的需要有人讲清楚。</p></div>
+      <div class="cmt"><div class="cmt-top"><span class="avatar" style="background:linear-gradient(135deg,#4ea8de,#3a7fc4)">不</span><b>不想上班的鱼</b><time>11-03</time></div><p>每天中午打开这个页面看一眼最新更新已经成习惯了，比刷短视频效率高，至少能知道事情的前因后果。</p></div>
+      <div class="cmt"><div class="cmt-top"><span class="avatar" style="background:linear-gradient(135deg,#e07b54,#c25b3a)">奶</span><b>奶油泡芙控</b><time>11-03</time></div><p>说句可能不太受欢迎的，有些场次其实没那么精彩，是被评论区吵出来的热度。大家还是多看看比赛本身吧。</p></div>
+      <div class="cmt"><div class="cmt-top"><span class="avatar" style="background:linear-gradient(135deg,#ffb648,#ff7a59)">追</span><b>追更小分队</b><time>11-02</time></div><p>希望后面能多出一点新观众向的内容，术语太多了，第一次看真的有点懵。FAQ 那部分帮了大忙。</p></div>
+      <div class="cmt"><div class="cmt-top"><span class="avatar" style="background:linear-gradient(135deg,#4fd1c5,#3aa8c9)">路</span><b>路过的键盘侠</b><time>11-02</time></div><p>争议判罚这事我持保留态度，回放角度太少，现在下结论都太早。等后续说明出来再说吧。</p></div>
+      <div class="cmt"><div class="cmt-top"><span class="avatar" style="background:linear-gradient(135deg,#ff5f7e,#c94f9e)">半</span><b>半糖去冰</b><time>11-01</time></div><p>最喜欢看赛后采访环节，比比赛本身还有意思。有些选手说话是真的有梗，剪辑出来能笑一整天。</p></div>
+      <div class="cmt"><div class="cmt-top"><span class="avatar" style="background:linear-gradient(135deg,#8b7cf6,#5d63d6)">深</span><b>深夜刷赛果</b><time>11-01</time></div><p>页面结构挺清楚的，分类找起来不费劲。唯一建议是热门推荐能不能按赛事类型再细分一下，有时候只想看某一类。</p></div>
+      <div class="cmt"><div class="cmt-top"><span class="avatar" style="background:linear-gradient(135deg,#57c785,#3a9e6f)">柠</span><b>柠檬不酸</b><time>10-31</time></div><p>双人组队那场我站沟通问题，不是技术问题。两个人明显不在一个节奏上，这种东西练是能练出来的。</p></div>
+      <div class="cmt"><div class="cmt-top"><span class="avatar" style="background:linear-gradient(135deg,#f0b429,#d99a1a)">大</span><b>大橘为重</b><time>10-30</time></div><p>每天大赛这么多，能有个地方把重点整理出来确实省事。希望更新能再快一点，有时候结果出来半天了页面还没动。</p></div>
+      <div class="cmt"><div class="cmt-top"><span class="avatar" style="background:linear-gradient(135deg,#4ea8de,#3a7fc4)">清</span><b>清风不识字</b><time>10-29</time></div><p>评论区比比赛还热闹，有些分析写得比正文还细，属于是吃瓜吃出专业度了。</p></div>
+      <div class="cmt"><div class="cmt-top"><span class="avatar" style="background:linear-gradient(135deg,#e07b54,#c25b3a)">一</span><b>一只咸鱼干</b><time>10-28</time></div><p>新人挑战赛那匹黑马我关注挺久了，这次算是打出来了。不过后面强度上来能不能稳住，还得再看看。</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- 资讯 -->
+<section class="sec" id="news">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>大赛相关资讯速览</h2>
+      <span>赛程、规则与动态</span>
+    </div>
+    <div class="news-grid">
+      <article class="news-item"><time>2026-11-07</time><b>明日对阵表更新，两场焦点战提前开打</b><p>主办方调整了部分场次时间，涉及两场关注度较高的对局，观众需要留意新的开赛时间，避免错过关键场次。</p></article>
+      <article class="news-item"><time>2026-11-06</time><b>裁判组就争议判罚发布补充说明</b><p>说明中附上了相关规则条文和回放截图，对争议点逐条回应。是否平息讨论，还要看后续舆论走向。</p></article>
+      <article class="news-item"><time>2026-11-05</time><b>线上积分赛规则微调，晋级形势生变</b><p>积分权重调整后，部分原本稳进下一轮的选手位置出现松动，具体影响需要结合后续赛果评估。</p></article>
+      <article class="news-item"><time>2026-11-04</time><b>受伤选手确认无碍，可正常出战后续比赛</b><p>此前在比赛中出现不适的选手已完成检查，官方确认不影响后续出场，相关场次安排不变。</p></article>
+      <article class="news-item"><time>2026-11-03</time><b>女子组决赛技术统计出炉，逆转过程可复盘</b><p>统计显示关键分处理是翻盘主因，多个回合的决策差异值得反复观看，适合想学技术的观众。</p></article>
+      <article class="news-item"><time>2026-11-02</time><b>新人挑战赛四强产生，黑马选手在列</b><p>四强名单与此前预测差异较大，新人选手的稳定性成为讨论焦点，后续对局强度会明显提升。</p></article>
+    </div>
+  </div>
+</section>
+
+<!-- 订阅 -->
+<section class="sec" id="subscribe">
+  <div class="wrap">
+    <div class="subscribe">
+      <div>
+        <h3>每天大赛结果，一次看完</h3>
+        <p>留下邮箱，获取每日大赛在线吃瓜摘要与重点场次提醒。</p>
+      </div>
+      <form onsubmit="return false;">
+        <input type="email" placeholder="你的邮箱地址">
+        <button type="button">订阅吃瓜摘要</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- 页脚 -->
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <h5>每日大赛在线吃瓜</h5>
+        <p class="foot-desc">一个围绕每日大赛结果、看点与讨论搭建的专题页面，按“赛事—看点—讨论”三层组织内容，帮你在碎片时间里快速补齐上下文。</p>
+      </div>
+      <div>
+        <h5>栏目导航</h5>
+        <a href="/#hot">热门推荐</a>
+        <a href="/#update">最新动态</a>
+        <a href="/#cats">分类入口</a>
+        <a href="/#deep">深度解析</a>
+      </div>
+      <div>
+        <h5>阅读帮助</h5>
+        <a href="/#guide">吃瓜指南</a>
+        <a href="/#faq">常见问题</a>
+        <a href="/#comments">网友评论</a>
+        <a href="/#news">赛事资讯</a>
+      </div>
+      <div>
+        <h5>友情链接</h5>
+        <a href="/#home">赛事资料库</a>
+        <a href="/#home">观赛日历</a>
+        <a href="/#home">选手档案</a>
+        <a href="/#home">规则速查</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 每日大赛在线吃瓜专题页 · 内容为信息整理与观点汇总，仅供参考</span>
+      <span>免责声明：页面内赛事、数据与评论均为示意性内容，不构成任何形式的官方结论。</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+  </html>
